@@ -3,7 +3,7 @@ using ListaContatos.Domain.Interfaces;
 
 namespace ListaContatos.Domain.Model
 {
-    public class PessoaRepositorio : IRepositorioContato<Contato>
+    public class ContatoRepositorio : IRepositorioContato<Contato>
     {
         private List<Contato> ListaContato = new List<Contato>();
 

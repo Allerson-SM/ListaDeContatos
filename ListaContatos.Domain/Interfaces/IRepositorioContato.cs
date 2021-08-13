@@ -13,5 +13,7 @@ namespace ListaContatos.Domain.Interfaces
         T RetornarPorId(int Id);
 
         void Atualizar(int Id, T entidade);
+
+        int ProximoId();
     }
 }

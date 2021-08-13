@@ -10,7 +10,7 @@ namespace ListaContatos.ConsoleUI
     {
         static void Main(string[] args)
         {
-            Menu();     
+            Menu();
         }
         private static readonly ContatoRepositorio _repositorio = new ContatoRepositorio();
         static ServiceContato _services = new ServiceContato(_repositorio);
@@ -27,7 +27,7 @@ namespace ListaContatos.ConsoleUI
             System.Console.WriteLine("5 - Consultar contato");
             System.Console.WriteLine("X - Sair");
 
-            var opcao = Console.ReadLine();
+            var opcao = Console.ReadLine().ToUpper();
 
             while (opcao.ToUpper() != "X")
             {
@@ -49,7 +49,7 @@ namespace ListaContatos.ConsoleUI
                         Consultar();
                         break;
                     default:
-
+                        Menu();
                         break;
                 }
                 Menu();
@@ -57,6 +57,7 @@ namespace ListaContatos.ConsoleUI
             System.Console.WriteLine("Obrigado por utilizar o sistema!");
             System.Console.WriteLine("Pressione qualquer tecla para encerrar");
             Console.ReadLine();
+            Environment.Exit(0);
         }
 
         public static void Listar()
@@ -76,8 +77,7 @@ namespace ListaContatos.ConsoleUI
                 System.Console.WriteLine($"Idade: {contato.retornaIdade()}");
                 System.Console.WriteLine($"E-mail: {contato.retornaEmail()}");
                 System.Console.WriteLine();
-
-                Console.ReadLine();
+                
                 Menu();
             }
         }
@@ -135,10 +135,35 @@ namespace ListaContatos.ConsoleUI
 
         public static void Consultar()
         {
+            var lista = _services.Listar();
+
+            if (lista.Count() == 0)
+            {
+                System.Console.WriteLine("Não há contatos cadastrados");
+                Menu();
+            }
+
             System.Console.WriteLine("Informe um Id para consultar");
             var id = int.Parse(Console.ReadLine());
 
-            _services.Consultar(id);
+            try
+            {
+                var contato = _services.Consultar(id);
+                System.Console.WriteLine($"ID: {contato.retornaId()}");
+                System.Console.WriteLine($"Nome: {contato.retornaNome()}");
+                System.Console.WriteLine($"Idade: {contato.retornaIdade()}");
+                System.Console.WriteLine($"E-mail: {contato.retornaEmail()}");
+                System.Console.WriteLine();
+
+                Menu();
+
+            }
+            catch (System.Exception)
+            {
+                System.Console.WriteLine("Id informado está errado");
+                Menu();
+            }
+
 
 
         }

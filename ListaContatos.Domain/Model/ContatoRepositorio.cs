@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using ListaContatos.Domain.Interfaces;
 
 namespace ListaContatos.Domain.Model
@@ -17,10 +18,9 @@ namespace ListaContatos.Domain.Model
             ListaContato.Add(entidade);
         }
 
-        public void Excluir(int Id)
+        public void Excluir(int id)
         {
-            Id = Id - 1;
-            ListaContato.RemoveAt(Id);
+            ListaContato.RemoveAt(id);
         }
 
         public List<Contato> Listar()
@@ -28,9 +28,14 @@ namespace ListaContatos.Domain.Model
             return ListaContato;
         }
 
-        public Contato RetornarPorId(int Id)
+        public Contato RetornarPorId(int id)
         {
-            return ListaContato[Id];
+            return ListaContato[id];
+        }
+
+        public int ProximoId()
+        {
+            return ListaContato.Count();
         }
     }
 }

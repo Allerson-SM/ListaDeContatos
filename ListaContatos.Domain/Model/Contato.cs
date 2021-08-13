@@ -2,8 +2,36 @@ namespace ListaContatos.Domain.Model
 {
     public class Contato : Base
     {
-        public string Nome { get; set; }
-        public int Idade { get; set; }
-        public string Email { get; set; }
+        private string Nome { get; set; }
+        private int Idade { get; set; }
+        private string Email { get; set; }
+    
+    public Contato(int id, string nome, int idade, string email)
+    {
+        Id = id;
+        Nome = nome;
+        Idade = idade;
+        Email = email;
+    }
+    public int retornaId()
+    {
+        return Id;
+    }
+
+    public string retornaNome()
+    {
+        return Nome;
+    }
+
+    public int retornaIdade()
+    {
+        return Idade;
+    }
+
+    public string retornaEmail()
+    {
+        return Email;
+    }
+    
     }
 }

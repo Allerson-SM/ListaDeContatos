@@ -77,9 +77,8 @@ namespace ListaContatos.ConsoleUI
                 System.Console.WriteLine($"Idade: {contato.retornaIdade()}");
                 System.Console.WriteLine($"E-mail: {contato.retornaEmail()}");
                 System.Console.WriteLine();
-                
-                Menu();
             }
+            Menu();
         }
         public static void Cadastrar()
         {

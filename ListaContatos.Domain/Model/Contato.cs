@@ -2,9 +2,9 @@ namespace ListaContatos.Domain.Model
 {
     public class Contato : Base
     {
-        private string Nome { get; set; }
-        private int Idade { get; set; }
-        private string Email { get; set; }
+        public string Nome { get; protected set; }
+        public int Idade { get; protected set; }
+        public string Email { get; protected set; }
     
     public Contato(int id, string nome, int idade, string email)
     {

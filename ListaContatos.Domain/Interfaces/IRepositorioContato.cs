@@ -8,11 +8,11 @@ namespace ListaContatos.Domain.Interfaces
 
         void Cadastrar(T entidade);
 
-        void Excluir(int Id);
+        void Excluir(T entidade);
 
         T RetornarPorId(int Id);
 
-        void Atualizar(int Id, T entidade);
+        void Atualizar(T entidade, T entidadeAtualizada);
 
         int ProximoId();
     }

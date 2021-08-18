@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\ListaContatos.Data\ListaContatos.Data.csproj" />
     <ProjectReference Include="..\ListaContatos.Domain\ListaContatos.Domain.csproj" />
   </ItemGroup>
 

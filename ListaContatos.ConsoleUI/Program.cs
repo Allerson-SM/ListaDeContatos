@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using ListaContatos.ConsoleUI.Services;
-using ListaContatos.Domain.Model;
+using ListaContatos.Data.Repository;
 
 namespace ListaContatos.ConsoleUI
 {
@@ -12,7 +12,7 @@ namespace ListaContatos.ConsoleUI
         {
             Menu();
         }
-        private static readonly ContatoRepositorio _repositorio = new ContatoRepositorio();
+        private static readonly ContatoRepository _repositorio = new ContatoRepository();
         static ServiceContato _services = new ServiceContato(_repositorio);
 
         public static void Menu()

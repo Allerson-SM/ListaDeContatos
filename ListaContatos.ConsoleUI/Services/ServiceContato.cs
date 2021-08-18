@@ -1,13 +1,14 @@
 using System.Collections.Generic;
+using ListaContatos.Data.Repository;
 using ListaContatos.Domain.Model;
 
 namespace ListaContatos.ConsoleUI.Services
 {
     public class ServiceContato
     {
-        private readonly ContatoRepositorio _repositorio;
+        private readonly ContatoRepository _repositorio;
 
-        public ServiceContato(ContatoRepositorio repositorio)
+        public ServiceContato(ContatoRepository repositorio)
         {
             _repositorio = repositorio;
         }
@@ -32,16 +33,20 @@ namespace ListaContatos.ConsoleUI.Services
 
         public void Excluir(int id)
         {
-            _repositorio.Excluir(id);
+            var contatoASerExcluido = Consultar(id);
+            _repositorio.Excluir(contatoASerExcluido);
         }
 
         public void Atualizar(int id, string nome, int idade, string email)
         {
+            var contatoAntigo = Consultar(id);
+
             Contato contatoAtualizado = new Contato(id,
                                                     nome,
                                                     idade,
                                                     email);
-            _repositorio.Atualizar(id, contatoAtualizado);
+
+            _repositorio.Atualizar(contatoAntigo, contatoAtualizado);
         }
 
         public Contato Consultar(int id)

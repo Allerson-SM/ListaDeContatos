@@ -19,14 +19,15 @@ namespace ListaContatos.ConsoleUI.Services
             
         }
 
-        public void Cadastrar(string nome, int idade, string email)
+        public void Cadastrar(string nome, int idade, string email, string celular)
         {
             var id = _repositorio.ProximoId();
 
             Contato novoContato = new Contato(id,
                                               nome,
                                               idade,
-                                              email);
+                                              email,
+                                              celular);
 
             _repositorio.Cadastrar(novoContato);
         }
@@ -37,14 +38,15 @@ namespace ListaContatos.ConsoleUI.Services
             _repositorio.Excluir(contatoASerExcluido);
         }
 
-        public void Atualizar(int id, string nome, int idade, string email)
+        public void Atualizar(int id, string nome, int idade, string email, string celular)
         {
             var contatoAntigo = Consultar(id);
 
             Contato contatoAtualizado = new Contato(id,
                                                     nome,
                                                     idade,
-                                                    email);
+                                                    email,
+                                                    celular);
 
             _repositorio.Atualizar(contatoAntigo, contatoAtualizado);
         }

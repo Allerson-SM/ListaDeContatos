@@ -23,6 +23,10 @@ namespace ListaContatos.Data.Map
             builder.Property(x => x.Email)
                 .HasColumnType("varchar(50)")
                 .IsRequired();
+            
+            builder.Property(x => x.Celular)
+                .HasColumnType("varchar(50)")
+                .IsRequired();
         }
     }
 }

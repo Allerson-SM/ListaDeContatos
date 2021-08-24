@@ -5,13 +5,15 @@ namespace ListaContatos.Domain.Model
         public string Nome { get; protected set; }
         public int Idade { get; protected set; }
         public string Email { get; protected set; }
+        public string Celular {get; protected set;}
     
-    public Contato(int id, string nome, int idade, string email)
+    public Contato(int id, string nome, int idade, string email, string celular)
     {
         Id = id;
         Nome = nome;
         Idade = idade;
         Email = email;
+        Celular = celular;
     }
     public int retornaId()
     {
@@ -31,6 +33,11 @@ namespace ListaContatos.Domain.Model
     public string retornaEmail()
     {
         return Email;
+    }
+
+    public string retornaCelular()
+    {
+        return Celular;
     }
     
     }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaContatos.ConsoleUI", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaContatos.Data", "ListaContatos.Data\ListaContatos.Data.csproj", "{DEF62908-73F7-4CC4-A21D-AF1ABCF1ED93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaContatos.Api", "ListaContato.Api\ListaContatos.Api.csproj", "{844C1465-A9EA-44EC-BA85-F585822D9BCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{DEF62908-73F7-4CC4-A21D-AF1ABCF1ED93}.Release|x64.Build.0 = Release|Any CPU
 		{DEF62908-73F7-4CC4-A21D-AF1ABCF1ED93}.Release|x86.ActiveCfg = Release|Any CPU
 		{DEF62908-73F7-4CC4-A21D-AF1ABCF1ED93}.Release|x86.Build.0 = Release|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Debug|x64.Build.0 = Debug|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Debug|x86.Build.0 = Debug|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Release|x64.ActiveCfg = Release|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Release|x64.Build.0 = Release|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Release|x86.ActiveCfg = Release|Any CPU
+		{844C1465-A9EA-44EC-BA85-F585822D9BCA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
